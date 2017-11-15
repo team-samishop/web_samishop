@@ -1,0 +1,201 @@
+$color_p = #000
+$color_s = #212121
+$color_t = #3D3D3D
+$color_f = #d7ab9e
+$color_b = #797979
+$color_int = #000
+$color_title = #000
+$fonttext = 'Arial'
+$fonttext_f1 ='RobotoCondensed-Bold'
+$fonttext_f2 ='RobotoCondensed-Regular'
+$fonttext_f3 ='RobotoCondensed-Regular'
+$fonttext_o1 = 'RobotoCondensed-Regular'
+$fonttext_o2 = 'RobotoCondensed-Regular'
+$font_size_h1 = 25px
+$font_size_h2 = 19px
+
+#content
+	.bredcrumb, .page_breadcrumb, .breadcrumb
+		border-bottom 1px solid $color_t
+		padding-bottom 5px
+		margin 60px 10px 10px 10px
+		a, big, span
+			float left
+		big
+			i
+				margin 7px 0 0 0
+		span
+			display inline-block
+			font-size 16px
+			color #282828
+			font-weight normal
+			font-family $fonttext_o2
+			text-transform uppercase
+			width auto
+			margin 0 5px
+
+.review_order
+	color #333
+	h2
+		font-family $fonttext_o1
+		text-align left
+		border-bottom 0px
+		text-transform uppercase
+		font-size 40px
+		color $color_title
+		line-height 40px
+		margin 20px 10px 40px 0px
+		padding 0px 0 10px 0
+		letter-spacing -1px
+		border-bottom 1px solid $color_p
+
+	.info_order
+		margin 0 0 20px -10px
+		strong
+			font-size 30px
+			color $color_int
+			font-weight normal
+			width 100%
+			float left
+			margin 10px 0 25px 0
+			span
+				width 80px
+				border-bottom 1px solid $color_title
+				padding 0 20px 5px 0
+				margin 0 0 27px 0
+				font-size 22px
+				color $color_t
+				font-weight normal
+				font-family $fonttext_o2
+				text-transform uppercase
+		p
+			margin 0 0 6px 0
+			display block
+			font-size 16px
+			font-family $fonttext_o1
+
+
+
+
+
+	/* SUMMARY - POSITION RIGHT */
+	.summary_review_order
+		.form_group
+			border-radius  0px
+			-moz-border-radius  0px
+			-webkit-border-radius  0px
+			border none
+			background #EAEAEA
+			padding 30px 30px
+			margin 65px 0 0 0
+			.summ_total
+				margin 0px 0 0 0
+				display block
+				strong
+					font-size 24px
+					font-family $fonttext_o2
+					color $color_int
+					text-transform uppercase
+					font-weight normal
+					margin 10px 0 15px 0
+					float left
+					text-align center
+					width 100%
+				p
+					font-size 17px
+					display inline-block
+					width 100%
+					margin 0 0 5px 0
+					span
+						font-size 17px
+						float left
+					b
+						float right
+						font-size 17px
+						font-weight normal
+				.item
+					border-bottom 1px solid $color_int
+					padding 5px 0
+					font-size 16px
+					margin-bottom 12px
+				.discount
+					color $color_s
+					b
+						color $color_s
+				.total
+					margin 3px 0 15px 0
+					display inline-block
+					color $color_int
+					font-weight normal
+					border-top 1px solid $color_int
+					padding 12px 0 0 0
+					font-size 18px
+					text-transform uppercase
+					span
+						font-size 18px
+					p
+						span
+							font-weight normal
+					b
+						color $color_t
+						font-size 18px
+				hr
+					border-top 1px solid #ccc
+					margin-bottom 10px
+					margin-top 10px
+				#summ_tcamb
+					#spnsummtcamb
+						float right
+						font-weight bold
+
+				#summ_totalpay
+					margin 10px 0
+					#spnsummtotalpay
+						float right
+						font-weight bold
+
+
+
+			.img_payment_method
+				width  100%
+				display inline-block
+				height  auto
+				padding  7px 0 0 0px
+				margin  10px 0
+				position relative
+				text-align center
+				p
+					font-size 24px
+					font-family $fonttext_o2
+					color $color_int
+					text-transform uppercase
+					font-weight normal
+					margin 0px 0 15px 0
+					text-align center
+					width 100%
+				img
+					/*top auto !important
+					left auto !important*/
+					margin-top 0px
+					display inline-block
+			.btn_pay
+				color #fff
+				background-color #000
+				border-color #000
+				font-size 28px
+				font-weight normal
+				padding 7px 15px 2px 15px
+				width 100%
+				&:hover
+					background $color_t
+					border-color $color_t
+
+@media (max-width:767px)
+
+	.review_order
+		.info_order
+			strong
+				span
+					display inline-block
+					width 100%
+					margin 0px

@@ -1,0 +1,262 @@
+$color_p = #000
+$color_s = #212121
+$color_t = #3D3D3D
+$color_f = #d7ab9e
+$color_b = #797979
+$color_int = #000
+$color_title = #000
+$fonttext = 'Arial'
+$fonttext_f1 ='RobotoCondensed-Bold'
+$fonttext_f2 ='RobotoCondensed-Regular'
+$fonttext_f3 ='RobotoCondensed-Regular'
+$fonttext_o1 = 'RobotoCondensed-Regular'
+$fonttext_o2 = 'RobotoCondensed-Regular'
+$font_size_h1 = 25px
+$font_size_h2 = 19px
+
+.thanks_main_cntn
+	display inline-block
+	margin 0 0 140px 0
+	width 100%
+	.page_title
+		color $color_int
+		font-size 75px
+		display block
+		font-family $fonttext_o1
+		text-transform uppercase
+		padding 15px 0 15px 0
+		font-weight normal
+		line-height 55px
+		text-align center
+		display inline-block
+		width 100%
+	.thanks_cntn_info
+		h4
+			font-size 25px
+			line-height 20px
+			color $color_int
+			font-family $fonttext_o1
+			text-align center
+			margin 10px 0 20px 0
+			display inline-block
+			width 100%
+		p
+			font-size 18px
+			margin 0px
+			line-height 20px
+			color $color_t
+			font-family $fonttext_o1
+			text-align center
+			border-top 1px solid $color_title
+			padding 25px 0
+		a
+			font-size 18px
+			line-height 20px
+			color $color_title
+			font-family $fonttext_o1
+			text-align center
+			display inline-block
+
+
+
+.order_detail
+	color #333
+	h2
+		font-family $fonttext_o1
+		text-align left
+		border-bottom 0px
+		text-transform uppercase
+		font-size 40px
+		color $color_title
+		line-height 40px
+		margin 0px 10px 40px 0px
+		padding 0px 0 10px 0
+		letter-spacing -1px
+		border-bottom 1px solid $color_p
+		//padding 0 0 0 30px
+	.to_order, .from_order, .your_order, .payment_method
+		margin 20px 0 20px
+
+		strong
+			font-size 30px
+			color $color_title
+			font-weight normal
+			width 100%
+			float left
+			margin 10px 0 10px 0
+			text-transform uppercase
+			font-family $fonttext_o2
+			span
+				font-size 18px
+				font-weight normal
+		p
+			margin 0 0 2px 0
+			display inline-block
+			width 100%
+			font-size 17px
+			color $color_t
+			font-family $fonttext_o1
+
+			span
+				width 130px
+				float left
+			small
+				width auto
+				float left
+				font-size 14px
+				font-weight bold
+
+	.payment_method
+		.payment_method_order
+			height 50px
+			display block
+			width 100%
+			margin 10px 0 -4px 0
+	.paymeans_btn
+		text-align center
+		display inline-block
+		margin 35px 0 0 0
+		.button_paynow
+			padding 8px 55px 5px
+
+
+	.product_list
+		margin 45px 0 0 0
+		display block
+		.row_header
+			border-bottom  1px solid #dde0e2
+			margin  -12px 0 0px 0
+			padding  0 0 5px 0
+			.title
+				font-size 17px
+				width 100%
+				text-align left
+				display block
+				font-weight normal
+				color $color_title
+			.title_right
+				color $color_title
+				text-align right
+				font-size 17px
+				width 100%
+				display block
+				font-weight normal
+
+		.row_item
+			display block
+			padding 10px 0 0 0
+			border-bottom 1px solid #dde0e2
+			p
+				font-size 14px
+				margin 8px 0 2px 0
+				img
+					margin -10px 0 8px 0
+			b
+				font-weight normal
+				font-size 16px
+
+
+			.item_qty
+				width 100%
+				text-align center
+				display block
+				input
+					width 50px
+					border  1px solid #dde0e2
+					text-align  center
+					color  #999
+					font-size  13px
+					padding  2px 0px
+				span
+					color: #EF8703;
+					font-weight: bold;
+					line-height: 15px;
+					font-size: 12px;
+					margin: 10px 0 0 0;
+					width: 100%;
+					float: left;
+
+
+			.item_price
+				width 100%
+				text-align right
+				display block
+				span
+					color $color_t
+					font-size 17px
+					font-weight normal
+			.item_subtotal
+				width 100%
+				text-align right
+				display block
+				span, b
+					color $color_t
+					font-size 17px
+					font-weight normal
+		.saved
+			border-top 1px solid #dde0e2
+			border-bottom none
+
+
+	.summary_orderdetail
+		hr
+			border-top 1px solid #dde0e2
+
+
+		.summary
+			margin 25px 0 0 0
+			display block
+			p
+				span
+					font-size 15px
+			.item_subtotal, .item_ship, .item_tax, .item_total
+				span
+					font-weight normal
+					color $color_t
+				b
+					float right
+					font-size 17px
+					font-weight normal
+					color initial
+			.item_ship
+				color $color_s
+			.item_total
+				color $color_title
+				font-weight bold
+				font-size 18px
+				span
+					font-size 17px
+					font-weight normal
+					color $color_title
+
+
+
+
+
+
+@media (min-width:768px) and (max-width:991px)
+	.order_detail
+		.to_order, .from_order, .your_order, .payment_method
+			padding 0 0 0 0px
+			border-right 0px
+
+		.paymeans_btn
+			margin 25px 0
+	.thanks_main_cntn
+		margin 0 0 150px 0
+		.page_title
+			margin 75px 0 15px
+@media (max-width:767px)
+	.summary_orderdetail
+		background #f1f1f1
+		padding-bottom 15px
+		hr
+			border-top 1px solid #fff
+
+	.to_order
+		padding 0 0 0 15px
+
+	.order_detail
+		.to_order, .from_order, .your_order, .payment_method
+			padding 0 0 0 0px
+			border-right 0px
