@@ -1,44 +1,30 @@
-$color_p = #a6b739
-$color_s = #324158
-$color_t = #6e7682
-$color_f = #93a4b2
-$color_b = #263142
-$fonttext = 'Arial'
-$fonttext_f1 ='Roboto Condensed'
-$fonttext_f2 ='Roboto Condensed'
-$fonttext_f3 ='Roboto Condensed'
-$fonttext_o1 = 'Roboto Condensed'
-$fonttext_o2 = 'Roboto Condensed'
-$font_size_h1 = 25px
-$font_size_h2 = 19px
-
+@import 'variables'
 body
 	font-size 13px
-
-	font-family $fonttext_f2
+	font-family $font_regular
 a
 	outline 0px !important
+	transition all 1s
 	//color #e81a24
 
 p
-	color #555555
+	font-family $font_regular
+	color $color_b
 
+h1, h2, h3, h4, h5
+	letter-spacing: -1px
 img
 	width auto
 	height auto
 
-.btn
-	border-radius 0px
-	padding 6px 20px
-
-
+ul
+	list-style none
+	padding 0
+	margin 0
 .btn
 	-moz-user-select: none;
 	background-image: none;
 	border: medium none
-	border-radius: 0px 0px 0px 0px;
-	-moz-border-radius: 0px 0px 0px 0px;
-	-webkit-border-radius: 0px 0px 0px 0px;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px;
@@ -51,8 +37,9 @@ img
 	white-space: nowrap;
 	background-color $color_int
 	-webkit-appearance: none !important
+	transition all 0.7s ease
 	@include border-radius(0)
-
+	
 input[type="text"], input[type="submit"], input[type="button"],input[type="password"], input[type="email"]
 	-webkit-appearance: none !important
 	@include border-radius(0)
@@ -133,7 +120,7 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 	background-color #FFFFFF
 .btn-default-alt
 	color #333
-	background-color #E6E6E6
+	background-color transparent
 	border-color #E6E6E6
 .btn-default-alt:hover,.btn-default-alt:focus,.btn-default-alt:active,.btn-default-alt.active,.open .dropdown-toggle.btn-default-alt
 	color #333
@@ -597,17 +584,6 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 
 /********MENU MOBILE PANEL***********/
 
-#nav_menu, #nav_menu ul {
-	list-style: outside none none;
-	padding 0px
-}
-#nav_menu {
-	float: left;
-	position: initial;
-	width: 100%;
-	z-index: 900;
-}
-
 
 /**********************/
 /**AGE GATE**/
@@ -829,39 +805,19 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 			color #828582
 			letter-spacing 9px
 
-/**LOGO CLIENTS **/
-.clients
-	display flex
-	flex-wrap wrap
-	justify-content center
-	margin 20px 0
 
-	.client
-		width 33%
-		padding 15px
-		display flex
-		justify-content center
-		align-items center
-
-	//align-item center
-
-
-
-/**********************/
 /**HEADER**/
 header
 	z-index 13
-	padding 0px
 	background #fff
-	//background $color_p
-	//background-image url(../../images/common/back-header.jpg)
-	min-height auto
-	display inline-block
-	width 100%
+	min-height 65px
+	display flex
 	border-bottom 1px solid #ddd
-	margin 0 0 10px 0
 	padding 0 10px
 	position fixed
+	width 100%
+	justify-content space-between
+	align-items center
 	.top_slogan
 		background #262729
 		display inline-block
@@ -934,8 +890,6 @@ header
 			padding 1px 0px 0 0;
 
 	#logo
-		display block
-		margin 7px 0 8px 0px
 		.visible_descktop
 			display block
 		.visible_mobile
@@ -1080,42 +1034,56 @@ header
 		display none
 
 	.menuhome
-		display block
-		position initial
-		#nav_menu > li
-			margin 23px 5.5% 0 0
+		#nav_menu  
+			width: 100%;
+			z-index: 900;
+			display flex
+			-webkit-display flex
+			justify-content: space-between
+			align-items center
+			height 65px
+			list-style: outside none none;
+			padding 0px
+			li
+				margin 0 30px
 		#nav_menu > li > a
-			color #fff
-			font-size 17px
+			font-size 14px
 			text-transform uppercase
 			color $color_s
 			margin 0px
-			padding 0 0 8px 0
-			margin 0 0 8px 0
 			display block
-			font-family $fonttext_f2
 			text-decoration none
-			font-weight normal
 			&:hover
 				color $color_p
 
 		/*BTN COMENZAR AHORA*/
 		#nav_menu
 			.nav-cotiza
-				margin-right 5%
-				margin-top 15px
+				display flex
+				justify-content center
+				align-items center
+				margin-right 0
 				text-align center
-				.btn-start-now
+				.btn-start-now	
 					background #a6b739
 					border-radius 4px
 					color #fff
-					padding 7px 30px 9px 30px
-					margin 0px
+					padding 7px 30px
 					&:hover
-						background #919b32
+						background $btn_c_hover
+			.nav-signin
+				margin-left 10px
+				text-align center
+				.btn-default-alt
+					background #f2f2f2
+					border 1px solid #f2f2f2
+					border-radius 5px
+					padding 6px 15px
+					margin 0  5px
+					&:hover
+						background $color_s
+						color #fff
 			.nav_telf
-				margin-right 3%
-				margin-top 23px
 				.ico-telf
 					background url(../../images/common/ico-telf.png)
 					background-repeat no-repeat
@@ -1123,17 +1091,13 @@ header
 					height 26px
 					float left
 					margin 0 10px 0 0
-				span
-					float left !important
-					color $color_s !important
+				
 				b
 					display inline !important
 					color $color_s !important
 
 			.nav_mail
-				margin-right 0px
-				margin-top 23px
-				float right
+
 				.ico-mail
 					background url(../../images/common/ico-mail.png)
 					background-repeat no-repeat
@@ -1143,7 +1107,7 @@ header
 					margin 0 10px 0 0
 				a
 					text-transform none
-
+	
 
 
 		#nav_menu > li > a > i
@@ -1404,6 +1368,7 @@ header
 							td
 								padding-top 20px
 								padding-bottom 40px
+
 		.pln-footer-btn
 			margin-top 15px
 			background #fff
@@ -1439,37 +1404,8 @@ header
 		padding-left 0px
 		padding-right 0px
 	//.tille_page
-	h1
-		font-family $fonttext_f2
-		text-align center
-		font-size 60px
-		color $color_p
-		line-height 58px
-		margin-bottom 15px
-		margin-top 40px
-		font-weight 100
-	strong
-		font-family $fonttext_f3
-		font-size 30px
-		line-height 30px
-		text-align center
-		font-weight normal
-		display inline-block
-		width 100%
-		font-weight normal
-		color $color_f
-		padding 0 5%
-		margin 0 0 20px 0
-	h2
-		font-family $fonttext_f2
-		color $color_s
-		font-size 45px
-		margin 60px 0 20px 0
-		text-align center
-	p
-		font-size 16px
-		font-family $fonttext_f3
-		color $color_s
+	
+
 	/* BANNER GALERY */
 	.galery_img
 		.galery_img_1
@@ -1568,24 +1504,360 @@ header
 	.banner_lateral
 		margin 20px 0 90px 0
 
+	/*Contenido Home*/
+	.home_section1
+		strong
+			format-title()
+		p
+			p_sub-title()
+		form 
+			display: flex
+			width: 500px
+			margin 25px auto
+			flex-flow wrap
+			align-items center
+			input
+				width 70%
+				margin 10px 0
+				height: 50px
+			button
+				width 28%
+				margin 10px 0 10px 2%
+				height: 50px
+				background-color: $color_p 
+				color #fff
+				font-family: $font_medium
+				font-size 17px
+				-webkit-box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
+				-moz-box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
+				box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
+			span
+				font-size 16px
+				text-align: center
+				color $color_f
+				font-family $font_arial
+				
+		a
+			width 100%
+			text-align: center
+			display block
+			font-size 17px
+			text-align: center
+			color $color_p
+			text-decoration underline
+			font-family $font_arial
+			
+	.home_section2
+		display flex
+		justify-content: space-between
+		margin 70px 0
+		div
+			display flex
+			justify-content center
+			flex-direction: column
+			align-items center
+			width 33.3%
+			i
+				color $color_f
+				font-size 100px
+			p
+				text-align center
+
+			
+	.home_section3
+		//.hs3_1
+		.hs_imgtext
+			display flex
+			justify-content space-between	
+			.hc_content
+				margin 0 7% 0 7%
+				display flex
+				flex-direction column
+				justify-content center
+				strong
+					sub_titulos()
+				a.btn-action
+					btn_action_small()
+				a.moreinfo
+					a-moreinfo()
+		.hs3_2
+			background #f2f2f2
+			.hs_imgtext
+				display -webkit-flex
+				-webkit-flex-direction row-reverse
+				display flex
+				flex-direction row-reverse
+				.hc_content
+					margin 0 7% 0 5%
+	
+		.hs3_4
+			background #f2f2f2
+			.hs_imgtext
+				display -webkit-flex
+				-webkit-flex-direction row-reverse
+				display flex
+				flex-direction row-reverse
+				.hc_content
+					margin 0 7% 0 5%
+	
+	.home_section4
+		margin 60px 0
+		h2
+			format-title()
+		strong
+			p_sub-title()
+		.clients
+			display flex
+			flex-wrap wrap
+			justify-content center
+			margin 50px 0
+			.client
+				width 33%
+				padding 15px
+				display flex
+				justify-content center
+				align-items center
+
+	.home_section5
+		background-image: url(http://via.placeholder.com/1600x800)
+		padding 50px 0
+		strong
+			format-title()
+			color $color_p
+			margin 0 0 5px 0
+		p.subtit
+			p_sub-title()
+			color $color_b
+		.team
+			display flex
+			flex-flow: wrap
+			justify-content space-between
+			padding 50px 0 0 0
+			.card_team
+				width 47%
+				background: #ffffff
+				border-radius 7px
+				margin 0 0 40px 0
+				padding 25px 35px
+
+	.home_section6
+		margin 60px 0
+		.caracteristicas
+			display flex
+			flex-direction column
+			align-items center
+			justify-content center
+			h2
+				format-title()
+				margin 0
+			strong	
+				p_sub-title()
+			.c_list
+				display flex
+				flex-direction: column
+				flex-flow: wrap
+				min-height 350px
+				margin 50px 0
+				p
+					width 50%
+					padding-right 7%
+					padding-left 3%
+					display flex
+					justify-content space-between
+					align-items center
+					i
+						min-width 65px
+						width 65px
+						height 61px
+						margin 0 15px 0 0
+					.ico-1
+						background url("../../images/common/ico-design.png");
+						background-repeat no-repeat
+						background-position 0 0
+					.ico-2
+						background url("../../images/common/ico-unlimited.png");
+						background-repeat no-repeat
+						background-position 0 0
+					.ico-3
+						background url("../../images/common/ico-excel.png");
+						background-repeat no-repeat
+						background-position 0 0
+					.ico-4
+						background url("../../images/common/ico-pays.png");
+						background-repeat no-repeat
+						background-position 0 0
+					.ico-5
+						background url("../../images/common/ico-moneys.png");
+						background-repeat no-repeat
+						background-position 0 0
+					.ico-6
+						background url("../../images/common/ico-promociones.png");
+						background-repeat no-repeat
+						background-position 0 0
+					.ico-7
+						background url("../../images/common/ico-google.png");
+						background-repeat no-repeat
+						background-position 0 0
+
+					.ico-8
+						background url("../../images/common/ico-settings.png");
+						background-repeat no-repeat
+						background-position 0 0
+
+
+	.home_section7
+		display flex
+		flex-direction column
+		align-items center
+		padding 70px 0
+		strong
+			format-title()
+		.content
+			width: 600px
+			text-align center 
+			margin 35px 0
+
+
+	.home_section8
+		padding 70px 0
+		display flex
+		justify-content center
+		.pagos
+			display flex
+			justify-content center
+			align-items center
+			flex-direction column
+			h2
+				format-title()
+			strong
+				text-align center
+				width 100%
+				display block
+				p_sub-title()
+			img
+				padding 20px 0
+	.home_section9
+		padding 50px 0
+		background #f2f2f2
+		.access
+			display flex
+			justify-content space-between
+			.a_section
+				display flex
+				width 50%
+				flex-direction column
+				padding 0 9% 0 0%
+				strong
+					font-size 25px
+					margin 0 0 10px 0
+				.btn
+					align-self flex-start
+					color #fff
+					font-family $font_medium
+					margin 20px 0 0 0
+					padding 10px 30px
+				.btn-price
+					background $color_price
+					&:hover
+						filter saturate(70%)
+				.btn-business
+					background $color_business
+					&:hover
+						filter saturate(70%)
+
+	.caract_section1
+		display flex
+		justify-content center
+		padding 20px 0
+		.sect
+			width 33%
+			padding 0 5% 0 0 
+			strong
+				font-size $size_h4
+				margin-bottom 10px
+				display block 
+		
+	
+	.caract_section2
+		padding 70px 0
+		.section_design
+			display flex
+			justify-content space-between
+			margin 0 0 60px 0
+			align-items center
+			.sd_content
+				width 50%
+				padding 0 6% 0 0
+				h3
+					sub_titulos_inter()
+				p
+					font-size 14px
+					span
+						color $color_p
+						margin-right 5px
+						font-family $font_medium
+					
+				.list
+					display flex
+					margin 20px 0 0 0
+					ul
+						width 50%
+						b
+							font-size 16px
+							margin-bottom: 10px
+							display block
+						li
+							margin 0 0 5px 0
+							i
+								color $color_p
+								width 25px 
+
+			.sd_content.comerciales
+				b
+					font-size 16px
+					margin-bottom: 10px
+					display block
+					margin-top 30px
+				.optns
+					display flex
+					ul
+						width 50%
+						span
+							font-size 15px
+							margin-bottom: 10px
+							display block
+							color $color_p
+							
+						li
+							margin 0 0 5px 0
+							i
+								color $color_p
+								width 25px 
+					ul.icns
+						width 100%
+
+					
+
+
+
 
 
 	.section-comenzar
-		margin 30px 0
+		margin 40px 0 100px 0
 		display inline-block
 		width 100%
 		h3
 			font-family $fonttext_f2
 			color $color_s
 			font-size 45px
-			margin 60px 0 20px 0
+			margin 0px 0 20px 0
 			text-align center
 			padding 0 10%
 		p
 			text-align center
 			width 100%
 			display inline-block
-			margin 30px 0 50px 0
+			margin 10px 0 50px 0
 			.btn-comenzar
 				background #a6b739
 				border-radius 5px
@@ -2053,30 +2325,29 @@ header
 
 
 
+
+
+
 /**FOOTER**/
 footer
-	margin-top 30px !important
+	margin-top 0px !important
 	background $color_b
-	color #fff
 	margin-bottom 0px !important
 	font-size 14px
-	padding 30px 0 10px 0
-	p
-		color #f2f2f2
-		margin 0 0 5px 0
+	padding 40px 0 0px 0
+
 	strong
 		margin 13px 0 10px 0
 		display block
 		font-weight normal
 		font-size 18px
+		color #fff
+		font-family $font_medium
 	.logo-footer
 		display inline-block
 		width 100%
 		text-align center
-		p
-			color $color_f
-			text-align center
-			margin 15px 0 0 0
+		margin 0 0 30px 0
 
 	.cat-populares
 		margin 10px 0
@@ -2097,6 +2368,42 @@ footer
 
 	.border-menu-footer
 		border-top 1px solid #444
+
+	.navfooter
+		display flex
+		justify-content space-between
+		div
+			width 33.3%
+			p
+				a
+					color #a2a3a5
+					&:hover
+						color $color_p	
+	.post_foo
+		background: #1d2633
+		width 100%
+		height 50px
+		display flex
+		justify-content center
+		align-items center
+		margin 70px 0 0 0
+		p
+			margin 0
+			color #a2a3a5
+		
+		.cont_post_foo
+			display flex
+			justify-content space-between
+			span
+				margin 0 15px
+			p
+				font-size 13px
+				a
+					&:hover
+						color $color_p	
+				i
+					margin 0 5px
+					font-size 18px
 
 	.menu-footer
 		margin 15px 0
@@ -2641,612 +2948,4 @@ footer
 		a
 			padding 0 5px
 
-
-
-
-
-@media (min-width:1200px) and (max-width:1359px)
-
-	header
-		.menuhome
-			#nav_menu > li
-				margin 23px 4% 0 0
-
-
-@media (min-width:992px) and (max-width:1199px)
-
-	header
-		.menuhome
-			#nav_menu
-				.nav-cotiza
-					margin-right 2%
-			#nav_menu > li
-				margin 23px 3% 0 0
-			#nav_menu > li > a
-				font-size 15px
-
-
-@media (min-width:768px) and (max-width:991px)
-	.menu_header
-		display none
-
-
-	header
-		min-height auto
-		height auto
-		#logo
-			width 100%
-			display inline-block
-			text-align center
-			img
-				display inline-block
-
-
-		.menuhome
-			#nav_menu
-				li
-					margin 11px 2.5% 0 0
-					a
-						font-size 15px
-				.nav-cotiza
-					margin-right 1%
-					margin-top 2px
-				.nav_telf
-					margin-right 0px
-					margin-top 11px
-				.nav_mail
-					margin-right 0
-					margin-top 11px
-		.menushopcart
-			margin 15px 0 0
-
-
-	.box_design_full
-		.img_static
-			img
-				max-height auto
-	.message_url_ne
-		margin 15px 0 0 0
-		.tellme_mail
-			margin 25px 0 0 0
-	.tellme_mail
-		p
-			font-size 14px
-			margin 18px 0 15px
-
-		.formmail
-			.mailclie
-				font-size 12px
-				width 66%
-			.btnmail
-				font-size 14px
-				width 34%
-
-
-		.btnmail
-			width 28%
-			float left
-			background #808080
-			color #fff
-			border none
-			text-align center
-			height 40px
-			font-family 'Arial'
-
-	.tiendas
-		section
-			.it_brand
-				width 25%
-
-
-	#content
-		.featured_products
-			.product_item
-				.product_name
-					height 42px
-					a
-						font-size 12px
-
-	footer
-		.cat-populares
-			padding-left 0px
-		.nav-categorias
-			ul
-				li
-					width 80%
-		.nav-footer
-			ul
-				li
-					width 24%
-		.menu-footer
-			ul
-				text-align center
-				li
-					padding 10px 10px
-
-
-
-@media (max-width:767px)
-
-	header
-		min-height auto
-		height auto
-		.top_slogan
-			padding 5px 0
-			.promotion
-				font-size 11px
-		.login
-			display inline-block
-			width 100%
-			padding 0px 5px
-			.logout
-				padding 0px
-		#logo
-			text-align left
-			margin 4px 0
-
-		.top_movil
-			margin 0px 0 0 0
-		.top_movil_search
-			margin -40px 0 0
-			position realtive
-
-		.top_movil_cart
-			margin 13px 0 0
-			padding 0px
-			position absolute
-
-		.header_sec_search
-			margin 10px 0 0 0
-			width 100%
-			.input_search
-				width 75%
-			.button
-				width 25%
-
-			/*MOBILE*/
-			.ico-search
-				width 40px
-				height 40px
-				border-radius 100%
-				background $color_p
-				color $color_s
-				cursor pointer
-				.glyphicon-search
-					width 100%
-					text-align center
-					font-size 20px
-					margin 8px 0 0 0
-			.t_search
-				.icon_t_search
-					margin 0
-
-		.menushopcart
-			margin 0
-			float none
-			font-size 25px
-			display inline-block
-			width 100%
-			text-align right
-			i
-				float left
-				margin 0 5px 0 0
-			a
-				float left
-				display inline-block
-
-
-		.navbar-default
-			.navbar-toggle
-				float right
-				margin -38px 0 0
-				background #fff
-
-		.menuhome
-			margin 0px 0 0 0
-			display block
-			//border-top 1px solid #ddd
-			.navbar-collapse
-				max-height 100%
-			.navbar-nav
-				margin 0
-			#nav_menu
-				ul
-					margin 0px
-					padding 0 0 0 30px
-					li
-						margin 11px 0px 0 0
-						a
-							font-size 15px
-							padding 0px
-							margin 0 0 5px 0
-				.nav-cotiza
-					margin-right 1%
-					margin-top 2px
-				.nav_telf
-					margin-right 0px
-					margin-top 11px
-				.nav_mail
-					margin-right 0
-					margin-top 11px
-					float left
-					margin-bottom 15px
-		.dropdown .dropdown-menu
-			background transparent
-		.dropdown .dropdown-menu li
-			margin 0 0 15px 0
-			width 100%
-		.dropdown .dropdown-menu li a
-			color $color_s
-		.dropdown .dropdown-menu li a:hover
-			color $color_p
-
-		.dropdown .dropdown-menu span
-			display none
-		/*BUTTON MENU - TOGGLE*/
-		.navbar-toggle
-			margin-bottom 0px
-			margin-right 0px
-			margin-top 10px
-			padding 10px 	7px
-			background #fff
-			border none
-			color $color_s
-
-
-
-
-		.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
-			border none
-			background #fff
-		.navbar-default .navbar-toggle
-			//border 1px solid #000
-		.navbar-default .navbar-toggle .icon-bar
-			background #000
-		.navbar-default .navbar-collapse, .navbar-default .navbar-form
-			border none
-			margin 10px 0 0 0
-
-		/*.header_sec_search
-			.input_search
-				padding-top 5px
-				line-height 20px*/
-
-
-	/*CONTENT*/
-	#content
-		.container-fluid
-			padding-left 0px
-			padding-right 0px
-
-
-		.banner
-			margin 15px 0 0px
-
-
-		.galery_img
-			.galery_img_1
-				margin 0 0 20px 0
-				text-align center
-				display inline-block
-				width 100%
-				img
-					display inline-block
-			.galery_img_2
-				margin 0 0 12px 0
-			.galery_img_3
-				margin 0 0 20px 0
-			.galery_img_4
-				margin 0 0 20px 0
-			.galery_img_5
-				margin 0 0 20px 0
-			.galery_img_6
-				margin 0 0 20px 0
-			.galery_img_6
-				margin 0 0 20px 0
-		/*PRODUCT RECOMMEND*/
-		.products_recommended
-			display none
-
-
-		.bx-wrapper
-			.bx-next::before
-				margin 0px
-		.bx-wrapper
-			.bx-controls-direction
-				a
-					width 20px
-		.product_view_recent
-			.bx-wrapper
-				.bx-prev
-					left: auto;
-					right: 30px;
-					top: -16%;
-				.bx-next
-					right: 5px;
-					top: -16%;
-
-
-		.featured_products
-			.product_item
-				.product_name
-					height 75px
-
-
-	.box_product
-		.img_product
-			height 150px
-			img
-				max-height 110px
-		.img_product_size170
-			height 120px
-			img
-				max-height 120px
-
-	.showing
-		width 100%
-		border-bottom 1px solid $color_title
-		padding 0 0 10px 0
-		display inline-block
-		margin 10px 0
-		#filters
-			margin 0px
-			padding 0px
-		.showing_link
-			display none
-
-
-
-	/*ESTILOS MENU FILTRO */
-	.showing_text
-		text-align left
-		font-size 13px
-		margin 0px 0 0 0
-	.showing_link
-		text-align left
-		margin 15px 0 5px 0
-		select
-			width 70%
-	.catgfilter
-
-		.headercf
-			background none
-			font-weight normal
-			margin-left -10px
-			margin-right -10px
-			padding 0px
-			width auto
-			display block
-			text-transform uppercase
-			color $color_title
-			i
-				margin 0 3px 0 0
-			a
-				background none
-				display inline-block
-				position relative
-				color $color_p
-				text-align right
-				transform rotate(0deg)
-				letter-spacing 0px
-				font-size 20px
-				text-decoration underline
-				text-decoration none
-				margin 0px
-				padding 0 5px 0 0
-				width 100%
-				height 24px
-				font-weight normal
-		.header_mascateg
-			background none
-			font-size 16px
-			font-weight bold
-			height 38px
-			margin 0px 0 0 0
-			padding 0px
-			width 100%
-			a
-				background none
-				height 35px
-				display block
-				position absolute
-				right 5px
-				top none
-				width 94%
-				color #808080
-				text-align right
-
-
-
-
-	.sidebar_filter
-		display none
-
-
-	footer
-		.departamentos
-			border none
-
-
-	/*WIDGET */
-	.banner_three_sections, banner_one_two_sections
-		.bnr_one, .bnr_two, .bnr_three
-			margin-right 0px
-			margin-left 0px
-
-	.banner_two_sections
-		.bnr_one, .bnr_two
-			margin-right 0px
-			margin-left 0px
-
-	.banner_one_two_sections
-		.bnr_one, bnr_two_three
-			margin-right 0px
-			margin-left 0px
-
-
-
-
-@media (max-width:650px)
-
-/*	header
-		.header_sec_search
-			margin 10px 0 0 0
-			.input_search
-				padding-top 3px
-		.navbar-default
-			.navbar-toggle
-				float left
-				margin -30px 0 0
-				background #fff
-
-
-		.top_movil_search
-			margin -40px 0 0
-
-		.top_movil_cart
-			margin 7px 0 0*/
-
-	/*footer
-		.cat-populares
-			padding-left 0px
-		.nav-categorias
-			ul
-				li
-					width 49%
-		.nav-footer
-			ul
-				li
-					width 32%
-		.menu-footer
-			ul
-				text-align center
-				li
-					padding 10px 10px*/
-
-
-@media (max-width:550px)
-
-	#msg_page_base
-		height 1780px
-	.process_message_age
-		height 1780px
-
-
-	#content
-		.planes-commerse
-			.plans_three_sections
-				.padd0, .padd1
-					padding-left 10px
-					padding-right 10px
-					margin-bottom 15px
-			.cuadro-plan
-				.table-plan
-					table
-						thead
-							tr
-								th
-									span
-										display block
-
-
-	//header
-		/*.header_sec_search
-			margin 10px 0 0 0
-			.search_wrapper
-				margin 35px 0 0 -215px
-				width 280px
-				.search_box
-					width 90%
-					.input_search
-						width 80%
-				.close_popup
-					float left
-					width 8%
-
-		.top_movil_search
-			margin -40px 0 0
-
-		.top_movil_cart
-			margin 5px 0 0
-
-
-		.navbar-default
-			.navbar-toggle
-				float left
-				margin -25px 0 0
-				background #fff*/
-
-
-
-
-@media (max-width:479px)
-
-	//header
-		/*.header_sec_search
-			margin 5px 0 0 0
-		.navbar-default
-			.navbar-toggle
-				float left
-				margin 0px 0 0
-				background #fff
-		.top_movil_search
-			margin 0px 0 0 0
-		.top_movil_cart
-			margin 11px 0 0 0*/
-/*
-	footer
-		.cat-populares
-			padding-left 0px
-		.nav-categorias
-			ul
-				li
-					width 49%
-		.nav-footer
-			ul
-				li
-					width 32%
-		.menu-footer
-			ul
-				text-align center
-				li
-					padding 10px 10px
-		.social
-			padding 15px 10px
-			text-align left*/
-
-
-@media (max-width:320px)
-
-
-	//header
-/*		.navbar-default
-			.navbar-toggle
-				float left
-				margin -35px 0 0
-				background #fff
-		.top_movil_search
-			margin 0px 0 0 0
-		.top_movil_cart
-			margin 7px 0 0 0*/
-
-
-	footer
-		.cat-populares
-			padding-left 0px
-		.nav-categorias
-			ul
-				li
-					width 49%
-		.nav-footer
-			ul
-				li
-					width 49%
-		.menu-footer
-			ul
-				text-align center
-				li
-					padding 10px 10px
-		.social
-			padding 15px 10px
-			text-align left
+@import 'responsive'
