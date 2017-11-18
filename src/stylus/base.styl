@@ -818,6 +818,7 @@ header
 	width 100%
 	justify-content space-between
 	align-items center
+	top 0
 	.top_slogan
 		background #262729
 		display inline-block
@@ -1200,6 +1201,7 @@ header
 /**CONTENT **/
 
 #content
+	margin-top 60px
 	.planes-commerse
 		.plan-free
 			margin-top 30px
@@ -1233,8 +1235,6 @@ header
 				color $color_s
 				line-height normal
 
-
-
 		strong
 			font-size 18px
 			font-weight normal
@@ -1243,6 +1243,8 @@ header
 			margin-top 10px
 			display inline-block
 			width 100%
+			display flex
+			justify-content: center
 			.padd0
 				padding-left 15px
 				padding-right 7px
@@ -1309,6 +1311,8 @@ header
 			span
 				font-size 15px
 				color #333
+			p
+				text-align center
 
 
 			.table-plan
@@ -1372,7 +1376,7 @@ header
 		.pln-footer-btn
 			margin-top 15px
 			background #fff
-			margin-bottom 50px
+			margin-bottom 100px
 			text-align center
 			padding 0 20px
 			strong
@@ -1405,7 +1409,95 @@ header
 		padding-right 0px
 	//.tille_page
 	
+	/*PAGE BUSINESS*/
+	.bss_section1
+		display flex
+		flex-direction column
+		margin 0 0 35px 0
+		h1
+			margin 0 0 40px 0
+		.sect
+			display flex
+			margin-bottom 40px
+			div
+				padding-right 4%
+				width 33.3%
+				strong
+					font-size 16px
+					margin-bottom 5px
+					display block 
+			
 
+
+
+	.bss_section2
+		display flex
+		flex-direction column
+		justify-content center
+		align-items center
+		h2
+			width 50%
+			text-align center
+			font-size 45px
+			line-height 63px
+		strong
+			font-size 28px
+			width 50%
+			text-align center
+			font-weight normal
+			margin-top 15px
+			
+
+	.bss_section3
+		padding 80px 0
+		display flex
+		flex-flow wrap
+		.sec_inter
+			width 50%
+			padding 0 10% 0 0
+			display flex
+			align-items flex-start
+			margin 0 0 40px 0
+			i
+				min-width 70px
+				height auto
+				display block
+				font-size 80px
+				margin-right 25px
+			div
+				strong
+					font-size 20px
+					margin-bottom 10px
+					display block
+	
+	.bss_section4
+		padding 10px 0 50px 0
+		strong
+			format-title()
+			margin 0 0 5px 0
+		p
+			p_sub-title()
+
+	.content_cotiza
+		.section_form_cotiza
+			margin 0 0 100px 0
+			display flex
+			justify-content center
+			.form-group
+				.form-control
+					margin 0 0 20px 0
+				#txtQtyProds
+					width 40%
+			strong
+				sub_titulos()
+				font-size 20px
+				text-align center
+				display inline-block
+				width 100%
+				margin 20px 0
+	
+	
+	
 	/* BANNER GALERY */
 	.galery_img
 		.galery_img_1
@@ -1771,11 +1863,16 @@ header
 		padding 20px 0
 		.sect
 			width 33%
-			padding 0 5% 0 0 
+			padding 0 5% 0 0	
 			strong
 				font-size $size_h4
 				margin-bottom 10px
-				display block 
+				display block
+			a
+				color $color_azul
+				text-decoration none
+				&:hover
+					 text-decoration underline
 		
 	
 	.caract_section2
@@ -1862,9 +1959,9 @@ header
 				background #a6b739
 				border-radius 5px
 				color #fff
-				padding 9px 50px 12px
+				padding 9px 30px 9px
 				margin 0px
-				font-size 22px
+				font-size 18px
 				font-family $fonttext_f2
 				&:hover
 					background #919b32
