@@ -16,7 +16,6 @@ h1, h2, h3, h4, h5
 img
 	width auto
 	height auto
-
 ul
 	list-style none
 	padding 0
@@ -116,6 +115,28 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 	background-color #181914
 	border-color #181914
 .btn-action .badge
+	color $color_s
+	background-color #FFFFFF
+.btn-action_lg
+	color #FFFFFF
+	background-color $color_p
+	border-color $color_p
+	font-size 22px
+	font-weight normal
+	padding 10px 30px
+	-webkit-appearance: none !important
+	@include border-radius(0)
+
+.btn-action_lg:hover,.btn-action_lg:focus,.btn-action_lg:active,.btn-action_lg.active,.open .dropdown-toggle.btn-action_lg
+	color #FFFFFF
+	background-color $color_s
+	border-color $color_s
+.btn-action_lg:active,.btn-action_lg.active,.open .dropdown-toggle.btn-action_lg
+	background-image none
+.btn-action_lg.disabled,.btn-action_lg[disabled],fieldset[disabled] .btn-action_lg,.btn-action_lg.disabled:hover,.btn-action_lg[disabled]:hover,fieldset[disabled] .btn-action_lg:hover,.btn-action_lg.disabled:focus,.btn-action_lg[disabled]:focus,fieldset[disabled] .btn-action_lg:focus,.btn-action_lg.disabled:active,.btn-action_lg[disabled]:active,fieldset[disabled] .btn-action_lg:active,.btn-action_lg.disabled.active,.btn-action_lg[disabled].active,fieldset[disabled] .btn-action_lg.active
+	background-color #181914
+	border-color #181914
+.btn-action_lg .badge
 	color $color_s
 	background-color #FFFFFF
 .btn-default-alt
@@ -1202,6 +1223,7 @@ header
 
 #content
 	margin-top 60px
+	/*PAGE PRICE*/
 	.planes-commerse
 		.plan-free
 			margin-top 30px
@@ -1407,7 +1429,6 @@ header
 	.container-fluid
 		padding-left 0px
 		padding-right 0px
-	//.tille_page
 	
 	/*PAGE BUSINESS*/
 	.bss_section1
@@ -1418,7 +1439,8 @@ header
 			margin 0 0 40px 0
 		.sect
 			display flex
-			margin-bottom 40px
+			margin-bottom 70px
+
 			div
 				padding-right 4%
 				width 33.3%
@@ -1438,8 +1460,8 @@ header
 		h2
 			width 50%
 			text-align center
-			font-size 45px
-			line-height 63px
+			font-size 50px
+			line-height 70px
 		strong
 			font-size 28px
 			width 50%
@@ -1449,7 +1471,7 @@ header
 			
 
 	.bss_section3
-		padding 80px 0
+		padding 120px 0
 		display flex
 		flex-flow wrap
 		.sec_inter
@@ -1642,7 +1664,7 @@ header
 	.home_section2
 		display flex
 		justify-content: space-between
-		margin 70px 0
+		margin 80px 0 100px 0
 		div
 			display flex
 			justify-content center
@@ -1857,6 +1879,8 @@ header
 					&:hover
 						filter saturate(70%)
 
+
+	/*PAGE CARACTER*/
 	.caract_section1
 		display flex
 		justify-content center
@@ -2006,6 +2030,88 @@ header
 
 
 
+	
+	/**PAGES RUBROS*/
+	.rubros_section1
+		background: url(http://via.placeholder.com/1650x315) center 0 no-repeat	
+		height 315px
+		width: 100%
+		display: block
+		.rs_bnr_1
+			display flex
+			height 315px	
+			width 100%
+			justify-content: center
+			align-items center
+			flex-direction column
+			h1
+				format-title()
+				font-size 45px
+			.btn
+				margin 20px 0
+			p
+				font-size 16px
+
+
+	.rubros_section2
+		background: url(http://via.placeholder.com/1650x505) center 0 no-repeat	
+		height 505px
+		width: 100%
+		display: block
+		.rs_bnr_2
+			display: flex
+			justify-content space-between
+			width 100%
+			height 505px 
+			.img
+				width 50%
+			.texto
+				display flex
+				width 50%
+				justify-content: center
+				align-items flex-start
+				flex-direction column
+				h2
+					format-title()
+				.btn
+					margin 20px 0
+			
+
+
+	.rubros_section3
+		padding 70px 0
+		display flex
+		flex-flow wrap
+		strong
+			sub_titulos_inter()
+			width 100%
+			margin-bottom 50px
+		.sect1, .sect2
+			width: 50%;
+			height: 240px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+		.sect2
+			b
+				sub_titulos()
+				width 100%
+			.img
+				display flex
+				flex-flow wrap
+				align-items center
+				width 100%
+				*
+					margin  5px 45px 15px 0
+			.img.alt
+				justify-content center
+		a
+			a-moreinfo()
+		
+
+			
+	
 	/** WIDGET NAVIGATOR PRODUCT **/
 	.wdgt_nav
 		background #444
