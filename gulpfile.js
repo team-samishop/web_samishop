@@ -10,7 +10,8 @@ var	browserSync = require('browser-sync');
 var pathStyles = [
 	"src/stylus/*.styl",
 	"src/stylus/responsive.styl",
-	"src/stylus/variables.styl"
+	"src/stylus/variables.styl",
+	"src/stylus/information.styl"
 ];
 var pathsStylesToWatch = [
     "src/stylus/base.styl",

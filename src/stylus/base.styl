@@ -829,7 +829,7 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 
 /**HEADER**/
 header
-	z-index 13
+	z-index 1500
 	background #fff
 	min-height 65px
 	display flex
@@ -1056,6 +1056,9 @@ header
 		display none
 
 	.menuhome
+		.navbar-default
+			background: #ffffff
+			border none
 		#nav_menu  
 			width: 100%;
 			z-index: 900;
@@ -1665,6 +1668,7 @@ header
 		display flex
 		justify-content: space-between
 		margin 80px 0 100px 0
+		align-items flex-start
 		div
 			display flex
 			justify-content center
@@ -2602,6 +2606,7 @@ footer
 			p
 				font-size 13px
 				a
+					color #a2a3a5
 					&:hover
 						color $color_p	
 				i
