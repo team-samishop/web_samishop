@@ -188,6 +188,23 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 	color #D03F2A
 	background-color #FFFFFF
 
+.btn-blue
+	color #FFFFFF
+	background-color #0069c3
+	border-color #0069c3
+.btn-blue:hover,.btn-blue:focus,.btn-blue:active,.btn-blue.active,.open .dropdown-toggle.btn-blue
+	color #FFFFFF
+	filter saturate(50%)
+  	-webkit-filter saturate(50%)
+.btn-blue:active,.btn-blue.active,.open .dropdown-toggle.btn-blue
+	background-image none
+.btn-blue.disabled,.btn-blue[disabled],fieldset[disabled] .btn-blue,.btn-blue.disabled:hover,.btn-blue[disabled]:hover,fieldset[disabled] .btn-blue:hover,.btn-blue.disabled:focus,.btn-blue[disabled]:focus,fieldset[disabled] .btn-blue:focus,.btn-blue.disabled:active,.btn-blue[disabled]:active,fieldset[disabled] .btn-blue:active,.btn-blue.disabled.active,.btn-blue[disabled].active,fieldset[disabled] .btn-blue.active
+	opacity 0.8
+.btn-blue .badge
+	color #0069c3
+	background-color #FFFFFF
+
+
 .sizechart
 	color #fff
 	margin-left -10px
@@ -1386,6 +1403,8 @@ header
 								i
 									color #aab646
 									font-size 20px
+								i.fa-times
+									color #f7121c
 						.title
 							font-weight normal
 							background #f7f7f7
@@ -1443,15 +1462,23 @@ header
 		.sect
 			display flex
 			margin-bottom 70px
-
 			div
 				padding-right 4%
 				width 33.3%
+				display flex
+				justify-content flex-start
+				align-items center
+				flex-direction column
+				i
+					font-size 80px	
+					margin-bottom 20px	
+
 				strong
 					font-size 16px
 					margin-bottom 5px
 					display block 
-			
+				p
+					text-align center
 
 
 
@@ -1494,7 +1521,25 @@ header
 					font-size 20px
 					margin-bottom 10px
 					display block
-	
+		.sec_btn
+			margin 50px 0
+			justify-content center
+			a
+				padding 12px 25px 
+				text-decoration none
+			.btn_caract
+				a-moreinfo()
+				border-radius: 0px
+				border-top: 1px solid transparent
+				border-left: 1px solid transparent
+				border-right: 1px solid transparent
+				border-bottom: 1px solid $color_azul
+				 &:hover
+					 border-radius: 7px
+					 border: 1px solid $color_azul
+
+			
+
 	.bss_section4
 		padding 10px 0 50px 0
 		strong
@@ -1622,48 +1667,97 @@ header
 		margin 20px 0 90px 0
 
 	/*Contenido Home*/
-	.home_section1
-		strong
-			format-title()
-		p
-			p_sub-title()
-		form 
-			display: flex
-			width: 500px
-			margin 25px auto
-			flex-flow wrap
+	.home_section0
+		display: flex;
+		padding: 30px 0 70px 0;
+		justify-content: center;
+		
+		div
+			display flex
+			flex-direction column
 			align-items center
-			input
-				width 70%
-				margin 10px 0
-				height: 50px
-			button
-				width 28%
-				margin 10px 0 10px 2%
-				height: 50px
-				background-color: $color_p 
-				color #fff
-				font-family: $font_medium
-				font-size 17px
-				-webkit-box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
-				-moz-box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
-				box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
+			padding 0 5%
+			text-align center
+			justify-content: center
+			p
+				width 80px
+				height 80px
+				background #333
+				display flex
+				justify-content center
+				align-items center
+				border-radius 50px
+				i
+					font-size 45px
+					color #fff
+			p.ico1
+				background #64D7D6
+			p.ico2
+				background #FF007B
+			p.ico3
+				background #F67280
+			p.ico4
+				background #5782bb
 			span
-				font-size 16px
-				text-align: center
-				color $color_f
-				font-family $font_arial
-				
-		a
-			width 100%
-			text-align: center
-			display block
-			font-size 17px
-			text-align: center
-			color $color_p
-			text-decoration underline
-			font-family $font_arial
-			
+				font-size: 14px
+ 
+	.home_section1
+		background #f2f2f2
+		padding 30px 0
+		.hs_conten
+			display flex
+			div
+				width 50%
+				padding: 0 50px 
+				display flex
+				justify-content center
+				align-items flex-start
+				flex-direction column
+			strong
+				format-title()
+				text-align left
+			p
+				font-size 15px
+			b
+				width 100%
+				display flex
+				margin 30px 0
+				a
+					display block
+					font-size 17px
+					margin 0 30px 0 0
+				a:nth-child(2)
+					a-moreinfo()
+					align-self center
+
+			form 
+				display: flex
+				width: 500px
+				margin 25px auto
+				flex-flow wrap
+				align-items center
+				input
+					width 70%
+					margin 10px 0
+					height: 50px
+				button
+					width 28%
+					margin 10px 0 10px 2%
+					height: 50px
+					background-color: $color_p 
+					color #fff
+					font-family: $font_medium
+					font-size 17px
+					-webkit-box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
+					-moz-box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
+					box-shadow: 0 0 22px 0px rgba(166,166,166,0.48)
+				span
+					font-size 16px
+					text-align: center
+					color $color_f
+					font-family $font_arial
+					
+	
 	.home_section2
 		display flex
 		justify-content: space-between
@@ -1692,6 +1786,7 @@ header
 
 			
 	.home_section3
+		padding 100px 0 50px 0
 		//.hs3_1
 		.hs_imgtext
 			display flex
@@ -1788,6 +1883,7 @@ header
 				p
 					font-size 14px
 					padding 20px 30px
+					color #8a8a8a
 				b
 					background #ccc
 					width 100%
@@ -1808,7 +1904,13 @@ header
 				b.c_team4
 					background #5c6ac4
 
-
+			.card_team:nth-child(1)
+				border 1px solid #fb8b8a
+			.card_team:nth-child(2)
+				border 1px solid #333
+			.card_team:nth-child(3)
+				border 1px solid #47c1bf
+	
 	
 	.home_section6
 		margin 60px 0
@@ -1904,8 +2006,11 @@ header
 				width 100%
 				display block
 				p_sub-title()
-			img
-				padding 20px 0
+				margin-bottom 50px
+			div
+				img
+					padding 21px 9px
+
 	.home_section9
 		padding 50px 0
 		background #f2f2f2
@@ -1917,6 +2022,7 @@ header
 				width 50%
 				flex-direction column
 				padding 0 9% 0 0%
+				justify-content: space-between
 				strong
 					font-size 25px
 					margin 0 0 10px 0
@@ -1930,11 +2036,14 @@ header
 					background $color_price
 					&:hover
 						filter saturate(70%)
-				.btn-business
-					background $color_business
+				.btn-emprendedor
+					background $color_emprendedor
 					&:hover
 						filter saturate(70%)
-
+				.btn-empresas	
+					background $color_empresas
+					&:hover
+						filter saturate(70%)
 
 	/*PAGE CARACTER*/
 	.caract_section1
@@ -1973,7 +2082,6 @@ header
 						color $color_p
 						margin-right 5px
 						font-family $font_medium
-					
 				.list
 					display flex
 					margin 20px 0 0 0

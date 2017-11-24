@@ -7,11 +7,11 @@
     <meta name="description" content="SamiShop">
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" type="image/png" href="centralfile/00000004/images/common/icon.png" />
-    <link href="centralfile/00000004/font/font.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="centralfile/000005B6/images/common/icon.png" />
+    <link href="centralfile/000005B6/font/font.css" media="screen" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/support/js_files/jquery.1.11.1/jquery.min.js"></script>
-    <link href='centralfile/00000004/es-PE/css_files/bootstrap.min.css' media="screen" rel="stylesheet" type="text/css" />
-    <link href='centralfile/00000004/es-PE/css_files/base.css' media="screen" rel="stylesheet" type="text/css" />
+    <link href='centralfile/000005B6/es-PE/css_files/bootstrap.min.css' media="screen" rel="stylesheet" type="text/css" />
+    <link href='centralfile/000005B6/es-PE/css_files/base.css' media="screen" rel="stylesheet" type="text/css" />
     <link href="support/font_dominio/font.css" media="screen" rel="stylesheet" />
 </head>
 
@@ -21,7 +21,7 @@
             <!--  LOGO  -->
             <div id="logo" class="">
                 <a href="/" title="Samishop">
-                    <img src="centralfile/00000004/es-PE/images/logo/logo.png" class="img-responsive" alt="Samishop-logo" title="Samishop">
+                    <img src="centralfile/000005B6/es-PE/images/logo/logo.png" class="img-responsive" alt="Samishop-logo" title="Samishop">
                 </a>
             </div>
             <!-- -Menu Principal -->
@@ -126,7 +126,7 @@
                                 <tbody>
 
                                     <tr>
-                                        <td colspan="3" class="title">Creación y Administración</td>
+                                        <td colspan="4" class="title">Creación y Administración</td>
                                     </tr>
 
 
@@ -264,27 +264,27 @@
                                     <tr>
                                         <td class="des-plan">Diseñamos tu Tienda Online
                                             </td>
-                                        <td>NO</td>
-                                        <td>SI</td>
+                                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
                                     </tr>
                                     <tr>
                                         <td class="des-plan">Integraciones con ERP
                                             </td>
-                                            <td>NO</td>
-                                            <td>SI</td>
+                                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-check"></i></td>
                                     </tr>
                                     <tr>
                                         <td class="des-plan">Asesoramiento en Publicidad Online
                                             </td>
-                                            <td>NO</td>
-                                            <td>SI</td>
+                                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-check"></i></td>
                                     </tr>
                           
                                     <tr>
                                         <td class="des-plan">Asesoramiento en Seguimiento de Conversiones
                                             </td>
-                                            <td>NO</td>
-                                            <td>SI</td>
+                                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                            <td><i class="fa fa-check"></i></td>
                                     </tr>
                                    
     
@@ -347,84 +347,7 @@
 
 
 
-            <div class="container backg_content promo-advance" style="display:none;">
-                <div class="row">
-                    <div class="col-xs-60 col-sm-40 col-md-25 col-lg-25">
-                        <div class="elements">
-                            <div class="alert alert-success" id="msg_succs_frm" style="display: none;">
-                                <button type="button" class="close" data-hide="alert">&times;</button>
-                                <p id="msgok"></p>
-                            </div>
-                            <div class="alert alert-danger" id="msg_dngr_frm" style="display: none">
-                                <button type="button" class="close" data-hide="alert">&times;</button>
-                                <p id="msgerror"></p>
-                            </div>
-                            <h2>Complete su información</h2>
-                            <strong><span id="lblMrchName"></span></strong>
-                            <small><span id="lblMrchEmail"></span></small>
-                            <input type="hidden" name="hdfMrchCtrl" id="hdfMrchCtrl" value="0" />
-                            <div class="form-group">
-                                <label for="txtRuc" id="lRuc">Ruc / Nro de identificación tributaria:</label>
-                                <input name="txtRuc" type="text" id="txtRuc" placeholder="" maxlength="20" class="form-control nickname" onkeypress="return soloNumeros(event)" />
-                            </div>
-                            <div class="form-group">
-                                <label for="txtRsoc" id="lRsoc">Nombre / Razón social / Nombre de la empresa:</label>
-                                <input name="txtRsoc" type="text" id="txtRsoc" placeholder="" maxlength="150" class="form-control nickname" oninput="validateSpecialChars(this.value,this.id);" />
-                            </div>
-                            <div class="form-group">
-                                <label for="txtDom" id="lDom">Dirección de facturación:</label>
-                                <input name="txtDom" type="text" id="txtDom" placeholder="" maxlength="150" class="form-control nickname" />
-                            </div>
-                            <div class="form-group">
-                                <label for="cliOpcCountry">Pais:</label>
-                                <select name="cliOpcCountry" id="cliOpcCountry" class="form-control tmno">
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="cliOpcState">Departamento:</label>
-                                <select name="cliOpcState" id="cliOpcState" class="form-control tmno">
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="cliOpcCity">Provincia:</label>
-                                <select name="cliOpcCity" id="cliOpcCity" class="form-control tmno">
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="cliOpcZipCode">Distrito:</label>
-                                <select name="cliOpcZipCode" id="cliOpcZipCode" class="form-control tmno">
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="txtcntNomb" id="lcntNomb">Nombre de contacto:</label>
-                                <input name="txtcntNomb" type="text" id="txtcntNomb" placeholder="" maxlength="80" class="form-control nickname" oninput="validateSpecialChars(this.value,this.id);" />
-                            </div>
-                            <div class="form-group">
-                                <label for="txtEmail" id="lEmail">Email:</label>
-                                <input name="txtEmail" type="text" id="txtEmail" placeholder="" maxlength="100" class="form-control nickname" oninput="validateEmail(this.value,this.id);" />
-                            </div>
-                            <div class="form-group">
-                                <label for="txtTlf" id="lTlf">Teléfono:</label>
-                                <input name="txtTlf" type="text" id="txtTlf" placeholder="" maxlength="11" class="form-control nickname" onkeypress="return soloNumeros(event)" />
-                            </div>
-                            <div class="modal-footer">
-                                <div class="row form_btn">
-                                    <div class="col-xs-60 col-sm-60 col-md-60 col-lg-60">
-                                        <input id="CancelPlan" type="button" value="Cancelar" class="btn btn-default" onclick="nwPlan()" />
-                                        <input id="saveSttus" type="button" value="Guardar" class="btn btn-primary" />
-                                    </div>
-                                </div>
-                            </div>
-                            <p>
-                                <span id="lblSaveResult"></span>
-                            </p>
-                            <div id="vsmMrchInfo" style="color:Red;display:none;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        
             
 
 
@@ -433,7 +356,7 @@
         <footer>
             <div class="container">
                 <div class="logo-footer">
-                    <img src="centralfile/00000004/es-PE/images/logo/logo-footer.png" alt="" width="auto" height="auto" />
+                    <img src="centralfile/000005B6/es-PE/images/logo/logo-footer.png" alt="" width="auto" height="auto" />
                 </div>
 
                 <div class="navfooter">
@@ -509,8 +432,8 @@
             /*]]>*/
             </script>
             <script src="support/js_files/bootstrap_3.3.6.min.js" defer="defer"></script>
-            <script src="centralfile/00000004/es-PE/js_files/global.js" defer="defer"></script>
-            <script src="centralfile/00000004/es-PE/js_files/parallax.min.js"></script>
+            <script src="centralfile/000005B6/es-PE/js_files/global.js" defer="defer"></script>
+            <script src="centralfile/000005B6/es-PE/js_files/parallax.min.js"></script>
             <!--estilos de redes sociales-->
             <link href="support/css_files/global.css" rel="stylesheet" type="text/css" />
             <form name="form1" method="post" action="" id="form1">

@@ -25,7 +25,7 @@ var taskStylusSelf = function(){
 			use: nib(),
 			compress: true
 		}))
-		.pipe(gulp.dest("./public/centralfile/00000004/es-PE/css_files/"));
+		.pipe(gulp.dest("./public/centralfile/000005B6/es-PE/css_files/"));
 }
 gulp.task("styles", function(){
 	return  taskStylusSelf();
