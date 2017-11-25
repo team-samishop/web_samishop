@@ -11,7 +11,8 @@ var pathStyles = [
 	"src/stylus/*.styl",
 	"src/stylus/responsive.styl",
 	"src/stylus/variables.styl",
-	"src/stylus/information.styl"
+	"src/stylus/information.styl",
+	"src/stylus/register.styl"
 ];
 var pathsStylesToWatch = [
     "src/stylus/base.styl",
