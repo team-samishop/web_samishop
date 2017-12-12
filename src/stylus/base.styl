@@ -6,7 +6,6 @@ a
 	outline 0px !important
 	transition all 1s
 	//color #e81a24
-
 p
 	font-family $font_regular
 	color $color_b
@@ -80,12 +79,6 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 	color #FFFFFF
 	background-color #333333
 	border-color #333333
-
-.btn-common-alt:hover,.btn-common-alt:focus,.btn-common-alt:active,.btn-common-alt.active,.open .dropdown-toggle.btn-common-alt
-	color #FFFFFF
-	background-color #262626
-	border-color #333333
-
 .btn-common-alt:active,.btn-common-alt.active,.open .dropdown-toggle.btn-common-alt
 	background-image none
 .btn-common-alt.disabled,.btn-common-alt[disabled],fieldset[disabled] .btn-common-alt,.btn-common-alt.disabled:hover,.btn-common-alt[disabled]:hover,fieldset[disabled] .btn-common-alt:hover,.btn-common-alt.disabled:focus,.btn-common-alt[disabled]:focus,fieldset[disabled] .btn-common-alt:focus,.btn-common-alt.disabled:active,.btn-common-alt[disabled]:active,fieldset[disabled] .btn-common-alt:active,.btn-common-alt.disabled.active,.btn-common-alt[disabled].active,fieldset[disabled] .btn-common-alt.active
@@ -206,6 +199,23 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 	background-color #FFFFFF
 
 
+.btn-blue_alt
+	color #FFFFFF
+	background transparent
+	border 1px solid $color_azul
+	padding 8px 16px
+.btn-blue_alt:hover,.btn-blue_alt:focus,.btn-blue_alt:active,.btn-blue_alt.active,.open .dropdown-toggle.btn-blue_alt
+	color #FFFFFF
+	background $color_azul
+.btn-blue_alt:active,.btn-blue_alt.active,.open .dropdown-toggle.btn-blue_alt
+	background-image none
+.btn-blue_alt.disabled,.btn-blue_alt[disabled],fieldset[disabled] .btn-blue_alt,.btn-blue_alt.disabled:hover,.btn-blue_alt[disabled]:hover,fieldset[disabled] .btn-blue_alt:hover,.btn-blue_alt.disabled:focus,.btn-blue_alt[disabled]:focus,fieldset[disabled] .btn-blue_alt:focus,.btn-blue_alt.disabled:active,.btn-blue_alt[disabled]:active,fieldset[disabled] .btn-blue_alt:active,.btn-blue_alt.disabled.active,.btn-blue_alt[disabled].active,fieldset[disabled] .btn-blue_alt.active
+	opacity 0.8
+.btn-blue_alt .badge
+	color $color_azul
+	background-color #FFFFFF
+
+
 .sizechart
 	color #fff
 	margin-left -10px
@@ -262,15 +272,15 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 
 
 /*WIDGET DE BANNER CAROUSEL  */
-.banner_principal
-	width 100%
-	margin 15px 0 30px 0
-	display inline-block
-	width 100%
-.slide
-	img
-		width auto !important
-		height auto !important
+// .banner_principal
+// 	width 100%
+// 	margin 15px 0 30px 0
+// 	display inline-block
+// 	width 100%
+// .slide
+// 	img
+// 		width auto !important
+// 		height auto !important
 
 
 /*WIDGET DE BANNER CAROUSEL CONTROLS */
@@ -1241,8 +1251,7 @@ header
 
 
 /**CONTENT **/
-
-#content
+#content, .content
 	margin-top 60px
 	/*PAGE PRICE*/
 	.planes-commerse
@@ -1637,10 +1646,11 @@ header
 				border-left: 1px solid transparent
 				border-right: 1px solid transparent
 				border-bottom: 1px solid $color_azul
-				 &:hover
-					 border-radius: 7px
-					 border: 1px solid $color_azul
-
+				&:hover
+					border-radius: 7px
+					border: 1px solid $color_azul
+	
+	
 			
 
 	.bss_section4
@@ -1650,7 +1660,6 @@ header
 			margin 0 0 5px 0
 		p
 			p_sub-title()
-
 	/*PAGE PARA EMPRESAS*/
 	.ps_section1
 		display flex
@@ -1661,7 +1670,7 @@ header
 		.sect
 			display flex
 			margin-bottom 70px
-			margin-top 20px
+			margin-top 2gulp0px
 			div
 				padding-right 4%
 				width 33.3%
@@ -1670,7 +1679,7 @@ header
 				align-items center
 				flex-direction column
 				i
-					font-size 70px	
+					font-size 60px	
 					margin-bottom 20px	
 					color $color_empresas
 				strong
@@ -1702,7 +1711,7 @@ header
 			
 
 	.ps_section3
-		padding 120px 0
+		padding 120px 0 10px 0 
 		display flex
 		flex-flow wrap
 		.sec_inter
@@ -1729,9 +1738,11 @@ header
 			a
 				padding 12px 25px 
 				text-decoration none
-			.btn-action
-				background $color_empresas
-				padding 11px 20px
+			// .btn-action
+			// 	background $color_empresas
+			// 	padding 11px 20px
+			.btn
+				margin 0px 0 0 0
 			.btn_caract
 				a-moreinfo()
 				border-radius: 0px
@@ -1742,8 +1753,17 @@ header
 				 &:hover
 					 border-radius: 7px
 					 border: 1px solid $color_azul
-
-			
+				i
+					font-size 17px
+					display inline-block
+					margin 0 10px 0 0
+					padding 0
+					min-width auto
+					color $color_azul
+			.btn-price
+				margin 0 40px 0 0
+				padding 12px 33px
+				font-size 16px
 
 	.ps_section4
 		padding 10px 0 50px 0
@@ -1776,8 +1796,7 @@ header
 				width 100%
 				margin 20px 0
 	
-	
-	
+
 	/* BANNER GALERY */
 	.galery_img
 		.galery_img_1
@@ -1994,18 +2013,21 @@ header
 			p
 				text-align center
 
-			
 	.home_section3
 		padding 100px 0 50px 0
 		//.hs3_1
 		.hs_imgtext
 			display flex
 			justify-content space-between	
+			img
+				width 50%
 			.hc_content
-				margin 0 7% 0 7%
+				margin 0
+				padding 0 1% 0 7%
 				display flex
 				flex-direction column
 				justify-content center
+				width 50%
 				strong
 					sub_titulos()
 				a.btn-action
@@ -2020,7 +2042,7 @@ header
 				display flex
 				flex-direction row-reverse
 				.hc_content
-					margin 0 7% 0 5%
+					padding 0 7% 0 1%
 	
 		.hs3_4
 			background #f2f2f2
@@ -2060,8 +2082,14 @@ header
 						filter: grayscale(0) contrast(1);
 						opacity: 1;
 						transition all 1s
-
-
+	.sect_cotiza
+		margin 0px
+		.clients
+			margin 20px 0 0
+	.sect_clients
+		background #f2f2f2
+		padding 50px 0 20px 0
+		margin 20px 0 0 0
 	.home_section5
 		//background-image: url(../images/banners/banner_team.jpg)
 		padding 50px 0
@@ -2238,23 +2266,25 @@ header
 					margin 0 0 10px 0
 				.btn
 					align-self flex-start
-					color #fff
-					font-family $font_medium
-					margin 20px 0 0 0
-					padding 10px 30px
-				.btn-price
-					background $color_price
-					&:hover
-						filter saturate(70%)
-				.btn-emprendedor
-					background $color_emprendedor
-					&:hover
-						filter saturate(70%)
-				.btn-empresas	
-					background $color_empresas
-					&:hover
-						filter saturate(70%)
-
+				
+	/*Botones***/
+	.btn
+		color #fff
+		font-family $font_medium
+		margin 20px 0 0 0
+		padding 10px 30px
+	.btn-price
+		background $color_price
+		&:hover
+			filter saturate(70%)
+	.btn-emprendedor
+		background $color_emprendedor
+		&:hover
+			filter saturate(70%)
+	.btn-empresas	
+		background $color_empresas
+		&:hover
+			filter saturate(70%)
 	/*PAGE CARACTER*/
 	.caract_section1
 		display flex
@@ -2263,6 +2293,11 @@ header
 		.sect
 			width 33%
 			padding 0 5% 0 0	
+			text-align center
+			i
+				font-size 60px
+				margin-bottom 20px
+				color $color_celeste
 			strong
 				font-size $size_h4
 				margin-bottom 10px
@@ -2332,9 +2367,6 @@ header
 						width 100%
 
 					
-
-
-
 
 
 	.section-comenzar
@@ -2407,10 +2439,11 @@ header
 	
 	/**PAGES RUBROS*/
 	.rubros_section1
-		background: url(http://via.placeholder.com/1650x315) center 0 no-repeat	
+		background: url(../images/banners/banner_retail.jpg) center 0 no-repeat	
 		height 315px
 		width: 100%
 		display: block
+		background-size cover
 		.rs_bnr_1
 			display flex
 			height 315px	
@@ -2421,14 +2454,22 @@ header
 			h1
 				format-title()
 				font-size 45px
+				color $color_s
+				text-shadow 2px 1px 3px #fff
 			.btn
 				margin 20px 0
 			p
 				font-size 16px
-
-
 	.rubros_section2
-		background: url(http://via.placeholder.com/1650x505) center 0 no-repeat	
+		//background: url(http://via.placeholder.com/1650x505) center 0 no-repeat	
+		background: rgba(0,94,162,1);
+		background: -moz-linear-gradient(top, rgba(0,94,162,1) 0%, rgba(0,205,161,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,94,162,1)), color-stop(100%, rgba(0,205,161,1)));
+		background: -webkit-linear-gradient(top, rgba(0,94,162,1) 0%, rgba(0,205,161,1) 100%);
+		background: -o-linear-gradient(top, rgba(0,94,162,1) 0%, rgba(0,205,161,1) 100%);
+		background: -ms-linear-gradient(top, rgba(0,94,162,1) 0%, rgba(0,205,161,1) 100%);
+		background: linear-gradient(to bottom, rgba(0,94,162,1) 0%, rgba(0,205,161,1) 100%);
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005ea2', endColorstr='#00cda1', GradientType=0 );
 		height 505px
 		width: 100%
 		display: block
@@ -2439,6 +2480,10 @@ header
 			height 505px 
 			.img
 				width 50%
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				padding-right: 3%;
 			.texto
 				display flex
 				width 50%
@@ -2447,10 +2492,15 @@ header
 				flex-direction column
 				h2
 					format-title()
+					color #fff
+					text-align left
+					
 				.btn
 					margin 20px 0
+				p
+					width 80%
+					color #fff
 			
-
 
 	.rubros_section3
 		padding 70px 0
@@ -2484,8 +2534,30 @@ header
 			a-moreinfo()
 		
 
-			
+	.rubros_section1.moda
+		background: url(../images/banners/banner_moda.jpg) center 0 no-repeat	
+	.rubros_section2.moda
+		background: rgba(0,62,168,1);
+		background: -moz-linear-gradient(top, rgba(0,62,168,1) 0%, rgba(255,124,216,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,62,168,1)), color-stop(100%, rgba(255,124,216,1)));
+		background: -webkit-linear-gradient(top, rgba(0,62,168,1) 0%, rgba(255,124,216,1) 100%);
+		background: -o-linear-gradient(top, rgba(0,62,168,1) 0%, rgba(255,124,216,1) 100%);
+		background: -ms-linear-gradient(top, rgba(0,62,168,1) 0%, rgba(255,124,216,1) 100%);
+		background: linear-gradient(to bottom, rgba(0,62,168,1) 0%, rgba(255,124,216,1) 100%);
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003ea8', endColorstr='#ff7cd8', GradientType=0 );		
 	
+	.rubros_section1.negocio
+		background: url(../images/banners/banner_negocio.jpg) center 0 no-repeat	
+	.rubros_section2.negocio
+		background: rgba(0,199,103,1);
+		background: -moz-linear-gradient(top, rgba(0,199,103,1) 0%, rgba(52,161,191,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,199,103,1)), color-stop(100%, rgba(52,161,191,1)));
+		background: -webkit-linear-gradient(top, rgba(0,199,103,1) 0%, rgba(52,161,191,1) 100%);
+		background: -o-linear-gradient(top, rgba(0,199,103,1) 0%, rgba(52,161,191,1) 100%);
+		background: -ms-linear-gradient(top, rgba(0,199,103,1) 0%, rgba(52,161,191,1) 100%);
+		background: linear-gradient(to bottom, rgba(0,199,103,1) 0%, rgba(52,161,191,1) 100%);
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c767', endColorstr='#34a1bf', GradientType=0 );
+
 	/** WIDGET NAVIGATOR PRODUCT **/
 	.wdgt_nav
 		background #444
@@ -2587,7 +2659,7 @@ header
 
 	/*WIDGET BLOG*/
 	.blog_store
-		margin 20px 0
+		margin 40px 0
 		display inline-block
 		width 100%
 		h3
@@ -2697,7 +2769,7 @@ header
 	/*WIDGET DE BANNER PRINCIPAL*/
 	.slide
 		img
-			width auto !important
+			width 100% !important
 			height auto !important
 
 	/*WIDGET DE LIST*/
@@ -3449,8 +3521,9 @@ footer
 		display inline-block
 	a
 		padding 0 5px
+
 .item_post
-	margin 10px 0 65px 0
+	margin 30px 0 65px 0
 	display inline-block
 	width 100%
 	h1
@@ -3475,7 +3548,6 @@ footer
 		font-size 13px
 		font-family $fonttext_f5
 		text-align justify
-
 .viewmore
 	font-family $fonttext_f2
 	margin-top 25px
@@ -3503,7 +3575,7 @@ footer
 		h1
 			font-family $fonttext_f2
 			font-size 23px
-			color $color_p
+			color $color_s
 			text-transform uppercase
 		h2
 			font-size 20px
