@@ -20,10 +20,10 @@
 	.menu_header
 		display none
 
-
 	header
 		min-height auto
 		height auto
+		flex-direction column
 		#logo
 			width 100%
 			display inline-block
@@ -31,8 +31,10 @@
 			img
 				display inline-block
 
-
 		.menuhome
+			width: 100%;
+			margin-left: -10px;
+			margin-right: -10px;
 			#nav_menu
 				li
 					margin 11px 2.5% 0 0
@@ -87,6 +89,56 @@
 		section
 			.it_brand
 				width 25%
+
+
+
+	.conten-ban
+		.carousel-indicators
+			display none
+		.carousel
+			.carousel-inner
+				.bnr_cap1
+					left: 7%;
+					right: 0%;
+					text-align: center;
+					top: 10%;
+					bottom: auto;
+					width: 50%;
+					text-shadow: none;
+					h3
+						font-family: 'OpenSans-Bold';
+						font-size: 32px;
+						margin: 0 0 10px;
+					.subtitle
+						display none
+				.btn
+					padding 10px 0px !important
+					margin 15px 0px 0 0 !important
+					width 75%
+
+				.item
+					.img_bnr
+						overflow: hidden
+						width 100%
+				.bnr_cap2
+					text-align center
+					left 8%
+					right 8%
+					top 10%
+					bottom auto
+					width auto
+					text-shadow none
+					.subtitle
+						display none
+
+	#content
+		.slide
+			img
+				max-width: 1650px !important
+				height: 350px !important
+				left: -10%
+				position: relative
+				width: auto !important
 
 
 	#content
@@ -275,12 +327,60 @@
 
 
 	/*CONTENT*/
+	.conten-ban
+		.carousel-indicators
+			display none
+		.carousel
+			.carousel-inner
+				.bnr_cap1
+					left: 5%;
+					right: 0%;
+					text-align: center;
+					top: 10%;
+					bottom: auto;
+					width: 50%;
+					text-shadow: none;
+					h3
+						font-family: 'OpenSans-Bold';
+						font-size: 32px;
+						margin: 0 0 10px;
+					.subtitle
+						display none
+				.btn
+					padding 10px 0px !important
+					margin 15px 0px 0 0 !important
+					width 75%
+
+				.item
+					.img_bnr
+						overflow: hidden
+						width 100%
+				.bnr_cap2
+					text-align center
+					left 8%
+					right 8%
+					top 10%
+					bottom auto
+					width auto
+					text-shadow none
+					.subtitle
+						display none
+
+	#content
+		.slide
+			img
+				max-width: 1650px !important
+				height: 350px !important
+				left: -10%
+				position: relative
+				width: auto !important
+
 	#content
 		.container-fluid
 			padding-left 0px
 			padding-right 0px
 
-
+		
 		.banner
 			margin 15px 0 0px
 
@@ -363,6 +463,9 @@
 					img
 						width 100%
 						margin 0 0 15px 0
+			.hs_imgtext
+				.hc_content
+					width 100%
 		.home_section5
 			.team
 				.card_team
@@ -561,40 +664,23 @@
 
 @media (max-width:650px)
 
-/*	header
-		.header_sec_search
-			margin 10px 0 0 0
-			.input_search
-				padding-top 3px
-		.navbar-default
-			.navbar-toggle
-				float left
-				margin -30px 0 0
-				background #fff
+	.conten-ban
+		.carousel
+			.carousel-inner
+				.bnr_aboutus
+					left: 8%;
+					padding-bottom: 0px;
+					right: 8%;
+					top: 12%;
+					bottom: auto;
+					padding-top: 0;
+					text-shadow: none;
+					h1
+						font-size: 30px;
+						letter-spacing: 1px;
+						line-height: 40px;
+						margin-top: 0;
 
-
-		.top_movil_search
-			margin -40px 0 0
-
-		.top_movil_cart
-			margin 7px 0 0*/
-
-	/*footer
-		.cat-populares
-			padding-left 0px
-		.nav-categorias
-			ul
-				li
-					width 49%
-		.nav-footer
-			ul
-				li
-					width 32%
-		.menu-footer
-			ul
-				text-align center
-				li
-					padding 10px 10px*/
 
 
 @media (max-width:550px)
@@ -637,86 +723,60 @@
 										display block
 
 
-	//header
-		/*.header_sec_search
-			margin 10px 0 0 0
-			.search_wrapper
-				margin 35px 0 0 -215px
-				width 280px
-				.search_box
-					width 90%
-					.input_search
-						width 80%
-				.close_popup
-					float left
-					width 8%
-
-		.top_movil_search
-			margin -40px 0 0
-
-		.top_movil_cart
-			margin 5px 0 0
-
-
-		.navbar-default
-			.navbar-toggle
-				float left
-				margin -25px 0 0
-				background #fff*/
-
-
 
 
 @media (max-width:479px)
 
-	//header
-		/*.header_sec_search
-			margin 5px 0 0 0
-		.navbar-default
-			.navbar-toggle
-				float left
-				margin 0px 0 0
-				background #fff
-		.top_movil_search
-			margin 0px 0 0 0
-		.top_movil_cart
-			margin 11px 0 0 0*/
-/*
-	footer
-		.cat-populares
-			padding-left 0px
-		.nav-categorias
-			ul
-				li
-					width 49%
-		.nav-footer
-			ul
-				li
-					width 32%
-		.menu-footer
-			ul
-				text-align center
-				li
-					padding 10px 10px
-		.social
-			padding 15px 10px
-			text-align left*/
+	.conten-ban
+		.carousel-indicators
+			display none
+		.carousel
+			.carousel-inner
+				.bnr_cap1
+					left: 0%;
+					right: 0%;
+					text-align: center;
+					top: 3%;
+					bottom: auto;
+					width: 50%;
+					text-shadow: none;
+					h3
+						font-family: 'OpenSans-Bold';
+						font-size: 32px;
+						margin: 0 0 10px;
+					.subtitle
+						display none
+				.btn
+					padding 10px 0px !important
+					margin 15px 0px 0 0 !important
+					width 75%
+
+				.item
+					.img_bnr
+						overflow: hidden
+						width 100%
+				.bnr_cap2
+					text-align center
+					left 8%
+					right 8%
+					top 10%
+					bottom auto
+					width auto
+					text-shadow none
+					.subtitle
+						display none
+
+	#content
+		.slide
+			img
+				max-width: 1650px !important
+				height: 350px !important
+				left: -100%
+				position: relative
+				width: auto !important
 
 
 @media (max-width:320px)
-
-
-	//header
-/*		.navbar-default
-			.navbar-toggle
-				float left
-				margin -35px 0 0
-				background #fff
-		.top_movil_search
-			margin 0px 0 0 0
-		.top_movil_cart
-			margin 7px 0 0 0*/
-
 
 	footer
 		.cat-populares
