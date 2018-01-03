@@ -9,7 +9,6 @@ a
 p
 	font-family $font_regular
 	color $color_b
-
 h1, h2, h3, h4, h5
 	letter-spacing: -1px
 img
@@ -223,6 +222,8 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 		background #000
 		color #999
 .article__meta
+		color #999
+.article__meta
 	display none !important
 .share-social
 	.share-button
@@ -247,10 +248,90 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 .conten-ban
 	&>.row
 		margin 0
+
+.conten-ban
 	.carousel
 		margin-left -10px !important
 		margin-right -10px !important
-		margin-bottom	45px
+		margin-bottom 45px
+		.carousel-inner
+			.btn
+				padding 10px 45px !important
+				margin 30px 20px 0 0 !important
+            .bnr_cap1
+				left 10%
+				right 10%
+				text-align left
+				top 15%
+				bottom auto
+				width 32%
+				text-shadow none
+				h3
+					font-family 'OpenSans-Bold'
+					font-size 40px
+					margin 0 0 10px
+				p
+					font-size 18px
+					font-family 'OpenSans-Semibold'
+				.bnr_openstore
+					background #1c1c1c
+					border 2px solid #1c1c1c
+					&:hover
+						background #000
+						border 2px solid #d1d821
+				.bnr_contact
+					background transparent
+					border 2px solid #fff
+					color #fff
+					&:hover
+						background #fff
+						border 2px solid #fff
+						color #a6b739 !important
+			.bnr_cap2
+				left auto
+				right 2%
+				text-align left
+				top 21%
+				bottom auto
+				width 34%
+				text-shadow none
+				h3
+					font-family 'OpenSans-Bold'
+					font-size 40px
+					margin 0 0 10px
+				p
+					font-size 18px
+					font-family 'OpenSans-Semibold'
+					color #fff
+				.bnr_openstore
+					background #a6b739
+					border 2px solid #d1d821
+					&:hover
+						background #d1d821
+						border 2px solid #d1d821
+						color #000
+				.bnr_contact
+					background transparent
+					border 2px solid #fff
+					color #fff
+					&:hover
+						background #fff
+						border 2px solid #fff
+						color #a6b739 !important
+			.bnr_aboutus
+				left 10%
+				padding-bottom 30px
+				right 10%
+				top 20%
+				bottom auto
+				padding-top 0
+				text-shadow none
+				h1
+					font-size 53px
+					letter-spacing 1px
+					line-height 80px
+					margin-top 0
+
 .carousel-indicators
 	bottom 10px
 	float right
@@ -272,15 +353,30 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 
 
 /*WIDGET DE BANNER CAROUSEL  */
-// .banner_principal
-// 	width 100%
-// 	margin 15px 0 30px 0
-// 	display inline-block
-// 	width 100%
-// .slide
-// 	img
-// 		width auto !important
-// 		height auto !important
+.banner_principal
+	width 100%
+	margin 15px 0 30px 0
+	display inline-block
+	width 100%
+.slide
+	img
+		width auto !important
+		height auto !important
+
+
+
+#content .about_section2, .content .about_section2
+	padding 0 13% 50px
+
+#content .about_section2 #logo a img, .content .about_section2 #logo a img
+	display inherit
+	margin 10px 0 35px
+
+#content .about_section2 p, .content .about_section2 p
+	line-height 22px
+
+#content .about_section2 a, .content .about_section2 a
+	color #0069c3
 
 
 /*WIDGET DE BANNER CAROUSEL CONTROLS */
@@ -2013,21 +2109,18 @@ header
 			p
 				text-align center
 
+			
 	.home_section3
 		padding 100px 0 50px 0
 		//.hs3_1
 		.hs_imgtext
 			display flex
 			justify-content space-between	
-			img
-				width 50%
 			.hc_content
-				margin 0
-				padding 0 1% 0 7%
+				margin 0 7% 0 7%
 				display flex
 				flex-direction column
 				justify-content center
-				width 50%
 				strong
 					sub_titulos()
 				a.btn-action
@@ -2042,7 +2135,7 @@ header
 				display flex
 				flex-direction row-reverse
 				.hc_content
-					padding 0 7% 0 1%
+					margin 0 7% 0 5%
 	
 		.hs3_4
 			background #f2f2f2
@@ -2369,6 +2462,9 @@ header
 					
 
 
+
+
+
 	.section-comenzar
 		margin 40px 0 100px 0
 		display inline-block
@@ -2443,7 +2539,6 @@ header
 		height 315px
 		width: 100%
 		display: block
-		background-size cover
 		.rs_bnr_1
 			display flex
 			height 315px	
@@ -2769,7 +2864,7 @@ header
 	/*WIDGET DE BANNER PRINCIPAL*/
 	.slide
 		img
-			width 100% !important
+			width auto !important
 			height auto !important
 
 	/*WIDGET DE LIST*/

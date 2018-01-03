@@ -17,6 +17,18 @@
 
 
 @media (min-width:768px) and (max-width:991px)
+
+	.conten-ban
+		.carousel
+			.carousel-inner
+				.bnr_aboutus
+					h1
+						font-size: 40px
+
+	.bnr_aboutus
+		h1
+			font-size: 40px
+
 	.menu_header
 		display none
 
@@ -117,6 +129,10 @@
 
 
 @media (max-width:767px)
+	
+	.bnr_aboutus
+		h1
+			
 
 	header
 		min-height auto
@@ -560,7 +576,23 @@
 
 
 @media (max-width:650px)
-
+	.conten-ban
+		.carousel
+			.carousel-inner
+				.bnr_aboutus 
+					left: 8%;
+					padding-bottom: 0;
+					right: 8%;
+					top: 12%;
+					bottom: auto;
+					padding-top: 0;
+					text-shadow: none;
+					h1 
+						font-size: 30px;
+						letter-spacing: 1px;
+						line-height: 40px;
+						margin-top: 0
+	
 /*	header
 		.header_sec_search
 			margin 10px 0 0 0
@@ -669,58 +701,59 @@
 
 @media (max-width:479px)
 
-	//header
-		/*.header_sec_search
-			margin 5px 0 0 0
-		.navbar-default
-			.navbar-toggle
-				float left
-				margin 0px 0 0
-				background #fff
-		.top_movil_search
-			margin 0px 0 0 0
-		.top_movil_cart
-			margin 11px 0 0 0*/
-/*
-	footer
-		.cat-populares
-			padding-left 0px
-		.nav-categorias
-			ul
-				li
-					width 49%
-		.nav-footer
-			ul
-				li
-					width 32%
-		.menu-footer
-			ul
-				text-align center
-				li
-					padding 10px 10px
-		.social
-			padding 15px 10px
-			text-align left*/
+	.conten-ban
+		.carousel-indicators
+			display none
+		.carousel
+			.carousel-inner
+				.bnr_cap1
+					left 0%
+					right 0%
+					text-align center
+					top 3%
+					bottom auto
+					width 50%
+					text-shadow none
+					h3
+						font-family 'OpenSans-Bold'
+						font-size 32px
+						margin 0 0 10px
+					.subtitle
+						display none
+				.btn
+					padding 10px 0 !important
+					margin 15px 0 0 0 !important
+					width 75%
+				.item
+					.img_bnr
+						overflow hidden
+						width 100%
+				.bnr_cap2
+					text-align center
+					left 8%
+					right 8%
+					top 10%
+					bottom auto
+					width auto
+					text-shadow none
+					.subtitle
+						display none
 
+	#content
+		.slide
+			img
+				max-width 1650px !important
+				height 350px !important
+				left -100%
+				position relative
+				width auto !important
+	
 
 @media (max-width:320px)
 
-
-	//header
-/*		.navbar-default
-			.navbar-toggle
-				float left
-				margin -35px 0 0
-				background #fff
-		.top_movil_search
-			margin 0px 0 0 0
-		.top_movil_cart
-			margin 7px 0 0 0*/
-
-
 	footer
 		.cat-populares
-			padding-left 0px
+			padding-left 0
 		.nav-categorias
 			ul
 				li
