@@ -4,34 +4,80 @@
 
 
 @media (min-width:992px) and (max-width:1199px)
-
 	header
 		.menuhome
 			#nav_menu
 				.nav-cotiza
-					margin-right 2%
+					margin-right 0%
+					width 30%
+				.nav-signin
+					margin-left 0px
+					width 30%
 			#nav_menu > li
-				margin 23px 3% 0 0
+				margin 0px
 			#nav_menu > li > a
-				font-size 15px
-
+				font-size 14px
+	.dom-content-header
+		flex-direction column
+		.menuhome
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			#nav_menu
+				flex-flow: wrap;
+				height: auto;
+				padding: 0 40px 5px;
+				justify-content: center
+				li
+					margin 0 3%
 
 @media (min-width:768px) and (max-width:991px)
 
+
+	.carousel-control
+		width 3%
 	.conten-ban
 		.carousel
 			.carousel-inner
+				.btn
+					width: 42%;
+					padding: 5px !important;
+					margin: 5px 0 !important;
 				.bnr_aboutus
 					h1
 						font-size: 40px
 
 	.bnr_aboutus
+		left 5%
+		right 5%
+		padding-bottom: 0px
 		h1
-			font-size: 40px
+			font-size 40px
+			line-height initial
+	.bnr_cap1
+		top 4%
+		h3
+			font-size: 20px
+		p
+			font-size: 14px
+	.bnr_cap2
+		top 4%
+		h3
+			font-size: 20px
+		p
+			font-size: 14px
 
 	.menu_header
 		display none
 
+	.dom-content-header
+		flex-direction column
+		.menuhome
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
 
 	header
 		min-height auto
@@ -43,22 +89,30 @@
 			img
 				display inline-block
 
-
 		.menuhome
 			#nav_menu
+				flex-flow: wrap;
+				height: auto;
+				padding: 0 40px 5px;
+				justify-content: center
 				li
-					margin 11px 2.5% 0 0
+					margin 0px 3%
 					a
-						font-size 15px
+						font-size 13px
+						padding: 3px 0 
 				.nav-cotiza
-					margin-right 1%
+					margin-right 0px
 					margin-top 2px
+					width 30%
 				.nav_telf
 					margin-right 0px
 					margin-top 11px
 				.nav_mail
 					margin-right 0
 					margin-top 11px
+				.nav-signin
+					margin-left: 0px
+					width 30%
 		.menushopcart
 			margin 15px 0 0
 
@@ -102,6 +156,7 @@
 
 
 	#content
+		margin-top 115px
 		.featured_products
 			.product_item
 				.product_name
@@ -129,11 +184,36 @@
 
 
 @media (max-width:767px)
-	
-	.bnr_aboutus
-		h1
+		
+	.carousel-control
+			width 3%
+		.conten-ban
+			.carousel
+				.carousel-inner
+					.btn
+						width: 100%;
+						padding: 5px !important;
+						margin: 5px 0 !important;
 			
+	.bnr_cap1
+		top 0%
+		left 5%
+		width: 35%
+		h3
+			font-size: 18px
 
+		.subtitle
+			display none
+	.bnr_cap2
+		top 0%
+		right 5%
+		width: 35%
+		h3
+			font-size: 18px
+		.subtitle
+			display none
+	
+	
 	header
 		min-height auto
 		height auto
