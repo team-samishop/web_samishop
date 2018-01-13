@@ -11,10 +11,38 @@
     <link href='centralfile/000005B6/es-PE/css_files/bootstrap.min.css' media="screen" rel="stylesheet" type="text/css" />
     <link href='centralfile/000005B6/es-PE/css_files/base.css' media="screen" rel="stylesheet" type="text/css" />
     <link href='centralfile/000005B6/es-PE/css_files/widget_catalog.css' media="screen" rel="stylesheet" type="text/css" />
-
+    
     <link href="support/font_dominio/font.css" media="screen" rel="stylesheet" />
     <script src="support/js_files/jquery.1.11.1/jquery.min.js"></script>
+    <script src='centralfile/000005B6/es-PE/js_files/jquery.smoove.min.js'/>
+    
     <script src="support/js_files/jquery.flexisel.js"></script>
+    <script>
+            $(document).ready(function() {
+                $('.sami_block').smoove({
+                    offset  : '20%',
+                    // moveX : '-200px',
+                    // moveY : '200px',
+                    // rotate :'90deg.'
+                });
+                // $('.sami_block').smoove({
+                //     offset: 150,
+                //     opacity: 0,
+                //     transition: "all 1s ease, opacity 1.5s ease",
+                //     transformStyle: 'preserve-3d',
+                //     transformOrigin: false,
+                //     perspective: 1000,
+                //     min_width: 768,
+                //     min_height: false
+                // });
+            });
+    </script>
+    <style>
+
+
+
+
+</style>
 </head>
 
 <body>
@@ -130,14 +158,16 @@
                         </div>
                     </div>
 
+
+            
+
                     <section class="home_section0">
 
-                        <div>
+                        <div >
                             <p class="ico1">
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                             </p>
-                            <span>Vende en todo
-                                <br> el mundo</span>
+                            <span>Vende en todo <br> el mundo</span>
                         </div>
                         <div>
                             <p class="ico2">
@@ -166,7 +196,7 @@
                     <section class="home_section1">
                         <div class="container">
                             <div class="hs_conten">
-                                <div class="text">
+                                <div class="text sami_block"  data-move-x="-500px" data-rotate="90deg">
                                     <h1>Empieza a Vender por Internet Gratis*</h1>
                                     <b>¡Abre tu Tienda Online en 30 segundos y empieza a vender.</b>
                                     <p>* Prueba por 15 días GRATIS la plataforma de comercio electrónico más completa en Perú.</p>
@@ -175,7 +205,7 @@
                                         <a href="/precios">Ver planes »</a>
                                     </b>
                                 </div>
-                                <div class="img">
+                                <div class="img sami_block" data-move-x="500px" data-rotate="-90deg">
                                     <img src="centralfile/000005B6/es-PE/images/banners/vende-por-internet.jpg" alt="Vende por internet">
                                 </div>
                             </div>
@@ -187,6 +217,7 @@
 
 
                 <div id="div_wdgt_02" class="wdgt_h">
+                    
                     <!-- <div class="container">
                     <section class="home_section2">
                         <div>
@@ -210,6 +241,7 @@
                     </section>
                     </div> -->
                     <!-- <div style="height:100px"></div> -->
+
                 </div>
 
 
