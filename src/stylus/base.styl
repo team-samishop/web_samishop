@@ -51,7 +51,6 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 	-moz-border-radius: 4px 4px 4px 4px !important
 	-webkit-border-radius: 4px 4px 4px 4px !important
 
-
 .btn:focus, .btn:active:focus, .btn.active:focus
 	outline: thin dotted;
 	outline-offset: -2px;
@@ -59,7 +58,6 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 .btn:hover, .btn:focus
 	color: #fff;
 	text-decoration: none;
-
 
 .btn-common
 	color #333333
@@ -93,6 +91,8 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 .btn-common-alt .badge
 	color #333333
 	background-color #FFFFFF
+
+
 .btn-action
 	color #FFFFFF
 	background-color $color_p
@@ -154,6 +154,24 @@ input[type="text"], input[type="submit"], input[type="button"],input[type="passw
 .btn-default-alt .badge
 	color #E6E6E6
 	background-color #333
+
+
+.btn-action-outlet
+	background: #f7f7f7 !important;
+	color: #000 !important;
+	border: 1px solid #ccc !important;
+	padding: 20px 45px !important;
+	font-size: 17px !important;
+	span
+		color $color_p
+.btn-action-outlet:hover,.btn-action-outlet:focus,.btn-action-outlet:active,.btn-action-outlet.active,.open .dropdown-toggle.btn-action-outlet
+	background: $color_p
+	color: #ffffff;
+	border: 1px solid $color_p;
+	span
+		color $color_s
+
+
 .btn-facebook
 	color #FFFFFF
 	background-color #3A5799
@@ -1373,6 +1391,7 @@ header
 					justify-content center
 					li
 						text-align center
+						font-size 14px
 				a
 					margin 30px 0 0 0
 				b
